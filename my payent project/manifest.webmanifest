@@ -1,0 +1,19 @@
+{
+  "id": "./index.html",
+  "name": "NairaFlow Demo Wallet",
+  "short_name": "NairaFlow",
+  "description": "A local, installable demo wallet for exploring money-management flows.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f4",
+  "theme_color": "#104b3a",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

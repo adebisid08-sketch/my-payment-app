@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#104b3a" />
+  <meta name="description" content="A local, installable demo wallet for exploring money-management flows." />
+  <title>NairaFlow | Demo Wallet</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body class="wallet-app">
+  <div id="app" aria-live="polite"></div>
+  <header class="page-heading">
+    <p class="eyebrow">MOBILE BANKING UI</p>
+    <h1>OPay Transfer Flow</h1>
+    <p>A responsive, interactive recreation inspired by your reference image.</p>
+  </header>
+
+  <main class="screen-gallery" aria-label="OPay app screens">
+    <article class="phone" data-screen="login">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content login-screen">
+        <div class="opay-logo"><span class="logo-mark"></span><span>Pay</span></div>
+        <div class="avatar">👨🏽‍💼</div>
+        <strong class="center">EMMANUEL(807****456)</strong>
+        <label class="field"><input type="password" placeholder="Enter 6-digit Password" maxlength="6" id="loginPin"/><button class="eye" data-toggle="loginPin" aria-label="Show password">◉</button></label>
+        <a class="forgot" href="#" data-message="Password recovery would open here.">Forgot Password?</a>
+        <button class="primary" data-go="home">Login</button>
+        <button class="text-button" data-message="Account switching selected.">Switch Account</button>
+        <div class="keypad-label">🛡 OPay Secure Numeric Keypad <span>Done</span></div>
+        <div class="keypad" data-keypad="loginPin"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="blank"></button><button>0</button><button data-delete="true">⌫</button></div>
+      </div>
+    </article>
+
+    <article class="phone" data-screen="home">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content home-screen">
+        <div class="greeting"><span class="mini-logo">◉</span> Hi, EMMANUEL <span class="greeting-icons">◴ ▣ ♧</span></div>
+        <section class="balance"><div>◉ Available <span class="muted">◉</span></div><strong>₦400,584.36</strong><button data-message="Add money selected.">＋ Add Money</button></section>
+        <div class="quick-actions"><button data-go="transfer">▣<small>To OPay</small></button><button data-go="transfer">▤<small>To Bank</small></button><button data-message="Savings selected.">▱<small>Save</small></button><button data-message="Loan options selected.">♧<small>Loan</small></button></div>
+        <div class="services"> <button>🌐<small>Airtime</small></button><button>▧<small>Data</small></button><button>▦<small>Betting</small></button><button>▣<small>TV</small></button><button>🪙<small>OWealth</small></button><button>♨<small>Loan Center</small></button><button>◖<small>Invitation</small></button><button>✚<small>More</small></button></div>
+        <div class="bottom-nav"><span>◉<small>Home</small></span><span>◇<small>Rewards</small></span><span>▤<small>Finance</small></span><span>▱<small>Cards</small></span><span>◯<small>Me</small></span></div>
+      </div>
+    </article>
+
+    <article class="phone" data-screen="transfer">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content transfer-screen">
+        <div class="nav-title"><button data-go="home">‹</button>Transfer to Bank Account <a href="#" data-message="Transfer history selected.">History</a></div>
+        <div class="promo"><span>🎁</span><div><b>Claim & Discounts with</b><br/>₦19 <small>on any bill</small></div><button>Claim</button></div>
+        <div class="free-transfer">● Free transfers for the day: <b>3</b></div>
+        <label class="input-label">Recipient Account<input id="accountNumber" inputmode="numeric" maxlength="10" placeholder="Enter 10 digits Account Number" /></label>
+        <label class="input-label">Select Bank<select id="bankSelect"><option value="">Select Bank</option><option>Guaranty Trust Bank</option><option>Access Bank</option><option>Zenith Bank</option><option>First Bank</option><option>United Bank for Africa</option></select></label>
+        <button class="primary next-button" data-action="validate-transfer">Next</button>
+        <div class="monitor">▣ &nbsp; Bank Transfer Success Rate Monitor <span>›</span></div>
+        <div class="recent-tabs"><b>Recents</b><b>Favourites</b><span>⌕</span></div>
+        <div class="recent"><span class="contact">O</span><div><b>OLUFUNMILAYO ESTHER IRANLOWOOLUWA</b><small>8112198065 PalmPay</small></div></div>
+        <div class="recent"><span class="contact purple">A</span><div><b>OLUWATOSIN FATIMAH AJIBOLA</b><small>1013459876 Lotus Bank</small></div></div>
+      </div>
+    </article>
+
+    <article class="phone dimmed" data-screen="confirm">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content">
+        <div class="nav-title"><button data-go="transfer">‹</button>Transfer to Bank Account</div>
+        <div class="recipient-card"><span class="bank-badge">GT</span><div><b>AJIBOLA EMMANUEL ADURAGBAMI</b><small>001469865 · Guaranty Trust Bank</small></div></div>
+        <div class="amount-panel"><small>Amount</small><strong>₦10,000.00</strong><div class="amount-shortcuts"><span>₦500</span><span>₦1,000</span><span>₦2,000</span></div></div>
+        <div class="reminder-modal"><button class="close" data-close-modal>×</button><h3>Reminder</h3><p>Double check the transfer details before you proceed. Please note that successful transfers cannot be reversed.</p><div class="detail-box"><b>Transaction Details</b><p>Name <strong>AJIBOLA EMMANUEL ADURAGBAMI</strong></p><p>Account No. <strong>001469865</strong></p><p>Bank <strong>Guaranty Trust Bank</strong></p><p>Amount <strong>₦10,000.00</strong></p></div><div class="modal-actions"><button data-go="transfer">Recheck</button><button class="primary" data-go="payment">Continue</button></div></div>
+      </div>
+    </article>
+
+    <article class="phone dimmed" data-screen="payment">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content">
+        <div class="nav-title"><button data-go="transfer">‹</button>Transfer to Bank Account</div>
+        <div class="recipient-card"><span class="bank-badge">GT</span><div><b>AJIBOLA EMMANUEL ADURAGBAMI</b><small>001469865 · Guaranty Trust Bank</small></div></div>
+        <div class="amount-panel"><small>Amount</small><strong>₦10,000.00</strong><div class="amount-shortcuts"><span>₦500</span><span>₦1,000</span><span>₦2,000</span></div></div>
+        <div class="payment-sheet"><button class="close" data-close-modal>×</button><h2>₦10,000.00</h2><div class="payment-row"><span>Bank</span><b>🔴 Guaranty Trust Bank</b></div><div class="payment-row"><span>Account Number</span><b>001469865</b></div><div class="payment-row"><span>Name</span><b>AJIBOLA EMMANUEL ADURAGBAMI</b></div><div class="payment-row"><span>Amount</span><b>₦10,000.00</b></div><div class="payment-row"><span>Fee</span><b>₦0.00</b></div><div class="payment-row"><span>Payment Method</span><b>Available Balance</b></div><div class="payment-row balance-row"><span>Wallet (400,584.36)</span><b>−₦10,000.00</b></div><button class="primary pay-button" data-go="pin">Pay</button></div>
+      </div>
+    </article>
+
+    <article class="phone dimmed" data-screen="pin">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content">
+        <div class="nav-title"><button data-go="transfer">‹</button>Transfer to Bank Account</div>
+        <div class="recipient-card"><span class="bank-badge">GT</span><div><b>AJIBOLA EMMANUEL ADURAGBAMI</b><small>001469865 · Guaranty Trust Bank</small></div></div>
+        <div class="pin-sheet"><button class="close" data-close-modal>×</button><h2>₦10,000.00</h2><h3>Enter Payment PIN <span>×</span></h3><div class="pin-dots"><i></i><i></i><i></i><i></i></div><div class="keypad" data-keypad="paymentPin"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button class="blank"></button><button>0</button><button data-delete="true">⌫</button></div><input id="paymentPin" type="password" maxlength="4" inputmode="numeric" aria-label="Payment PIN" hidden /></div>
+      </div>
+    </article>
+
+    <article class="phone" data-screen="success">
+      <div class="status"><span>12:22 ▴</span><span class="island"></span><span>▮ ▴ ▰</span></div>
+      <div class="phone-content success-screen"><div class="success-check">✓</div><b>Transfer successful</b><h2>₦10,000.00</h2><p class="success-note">The recipient account is expected to be credited within 5 minutes, subject to notification by the bank.</p><div class="success-actions"><button data-message="Receipt sharing selected.">♧ Share Receipt</button><button data-go="home">＋ Add Money</button><button data-message="Recipient added to favourites.">♙ Add to favourites</button><button data-message="Transaction details opened.">▣ View Details</button></div><h4>Special Bonus For You</h4><div class="bonus"><span>🎉</span><div><b>₦10 Betting Voucher</b><small>Recharge ₦100 to get a bonus</small></div><button>Use</button></div><div class="bonus"><span>🪙</span><div><b>Enjoy online payment</b><small>Using OPay Verve Card now</small></div><button>Go</button></div><div class="bonus"><span>🌕</span><div><b>Top up mobile data</b><small>Get up to 6% cashback</small></div><button>Go</button></div><div class="bonus"><span>♧</span><div><b>Don't Miss Out</b><small>Balance with Daily Interest</small></div><button>Go</button></div></div>
+    </article>
+  </main>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
